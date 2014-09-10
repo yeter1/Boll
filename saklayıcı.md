@@ -1,0 +1,1 @@
+local Disable = nil function OnLoad() Menu = scriptConfig("Safer Streamer by Egemen", "SSegemen") Menu:addParam("disableMode", "Disable mode", SCRIPT_PARAM_ONKEYTOGGLE, true, string.byte("S")) end function OnTick() Disabler() if Menu.disableMode then Disable = true else Disable = false end end function Disabler() if Disable then DisableOverlay() else EnableOverlay() end end
